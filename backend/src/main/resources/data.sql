@@ -18,4 +18,8 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Bootcamp HTML', 'ht
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z', TIMESTAMP WITH TIME ZONE '2021-11-20T03:00:00Z', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z', TIMESTAMP WITH TIME ZONE '2021-12-20T03:00:00Z', 1);
 
+INSERT INTO tb_resource(title, description, position, img_uri, type, offer_id) VALUES ('Trilha HTML', 'Trilha principal do curso', 1, 'https://revista-images.querobolsa.com.br/revista/post_images/32056/48006f0bd36a2f1bc743029003d24458b04e8804.jpg?1603386874', 1, 1);
+INSERT INTO tb_resource(title, description, position, img_uri, type, offer_id) VALUES ('Forum', 'Tire suas dúvidas', 2, 'https://revista-images.querobolsa.com.br/revista/post_images/32056/48006f0bd36a2f1bc743029003d24458b04e8804.jpg?1603386874', 2, 1);
+INSERT INTO tb_resource(title, description, position, img_uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://revista-images.querobolsa.com.br/revista/post_images/32056/48006f0bd36a2f1bc743029003d24458b04e8804.jpg?1603386874', 0, 1);
+
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('A data de inicio do seu curso é 20/11/2020', TIMESTAMP WITH TIME ZONE '2020-11-18T03:00:00Z', false, 'rota', 1);
