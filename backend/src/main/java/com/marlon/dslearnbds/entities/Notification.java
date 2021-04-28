@@ -22,7 +22,7 @@ public class Notification implements Serializable {
 	private Long id;
 	private String text;
 	private Instant moment;
-	private Boolean read;
+	private boolean read;
 	private String route;
 	
 	@ManyToOne
@@ -32,7 +32,7 @@ public class Notification implements Serializable {
 	public Notification() {
 	}
 
-	public Notification(Long id, String text, Instant moment, Boolean read, String route, User user) {
+	public Notification(Long id, String text, Instant moment, boolean read, String route, User user) {
 		super();
 		this.id = id;
 		this.text = text;
@@ -66,11 +66,11 @@ public class Notification implements Serializable {
 		this.moment = moment;
 	}
 
-	public Boolean getRead() {
+	public boolean getRead() {
 		return read;
 	}
 
-	public void setRead(Boolean read) {
+	public void setRead(boolean read) {
 		this.read = read;
 	}
 
