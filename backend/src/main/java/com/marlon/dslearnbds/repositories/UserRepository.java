@@ -6,6 +6,6 @@ import com.marlon.dslearnbds.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	User findByEmail(String name);
+	User findByEmail(String email);
 	
 }

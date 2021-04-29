@@ -24,6 +24,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.marlon.dslearnbds.dto.UserDTO;
+
 @Entity
 @Table(name = "tb_user")
 public class User implements UserDetails, Serializable {
@@ -118,6 +120,10 @@ public class User implements UserDetails, Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public UserDTO convert() {
+		return new UserDTO(this);
 	}
 
 	@Override
