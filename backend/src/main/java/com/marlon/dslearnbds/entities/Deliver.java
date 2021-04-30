@@ -13,6 +13,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.marlon.dslearnbds.dto.DeliverRevisionDTO;
 import com.marlon.dslearnbds.entities.enums.DeliverStatus;
 
 @Entity
@@ -145,5 +146,9 @@ public class Deliver implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public DeliverRevisionDTO convertToRevision() {
+		return new DeliverRevisionDTO(this);
 	}
 }
