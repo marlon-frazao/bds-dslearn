@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.marlon.dslearnbds.dto.NotificationDTO;
+
 @Entity
 @Table(name = "tb_notification")
 public class Notification implements Serializable {
@@ -66,7 +68,7 @@ public class Notification implements Serializable {
 		this.moment = moment;
 	}
 
-	public boolean getRead() {
+	public boolean isRead() {
 		return read;
 	}
 
@@ -113,5 +115,9 @@ public class Notification implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public NotificationDTO convert() {
+		return new NotificationDTO(this);
 	}
 }
